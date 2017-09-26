@@ -1,3 +1,9 @@
+# Author : Francesca Rodricks
+# Date Created: 24/09/2017
+# Date Modified: 26/09/2017
+# Problem Statement: Adding fractions/rational numbers
+# Class :Fraction
+
 require_relative  '../FRACTIONS/number'
 
 class Fraction

@@ -1,9 +1,14 @@
+# Author : Francesca Rodricks
+# Date Created: 24/09/2017
+# Date Modified: 26/09/2017
+# Problem Statement: Adding fractions/rational numbers
+# Number Module Spec
+
 require 'rspec'
 require_relative  '../FRACTIONS/number'
 
 RSpec.describe Number, type: :module do
 
-  # convert numerator, denominator to rational
   describe '#to_rational' do
 
     subject { Number.to_rational(numerator, denominator) }
@@ -19,3 +24,4 @@ RSpec.describe Number, type: :module do
     end
   end
 end
+
