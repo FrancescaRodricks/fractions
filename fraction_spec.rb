@@ -16,7 +16,11 @@ RSpec.describe Fraction, type: :class do
   let(:numerator) { 1 }
   let(:denominator) { 2 }
 
-  subject { described_class.new(numerator, denominator) }
+  subject do described_class.new({
+      numerator: numerator,
+      denominator: denominator
+    })
+  end
 
   describe '#initialize' do
     it 'creates an instance of numerator' do
@@ -34,6 +38,14 @@ RSpec.describe Fraction, type: :class do
 
     it 'adds two rational numbers' do
       expect(subject.addition(rational_number)).to eq(result_i_care)
+    end
+
+    context 'when denominator is 0' do
+      let(:denominator) { 0 }
+      let(:result_i_care) { Rational(5,4) }
+      it 'set default denominator to 1' do
+        expect(subject.addition(rational_number)).to eq(result_i_care)
+      end
     end
   end
 end

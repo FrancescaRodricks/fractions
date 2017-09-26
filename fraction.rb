@@ -10,9 +10,9 @@ class Fraction
   include Number
   attr_reader :numerator, :denominator
 
-  def initialize(numerator, denominator)
-    @numerator = numerator
-    @denominator = denominator
+  def initialize(args)
+    @numerator = args.fetch(:numerator)
+    @denominator = args.fetch(:denominator) == 0 ? 1 : args.fetch(:denominator)
     @rational_number = Number.to_rational(@numerator, @denominator)
   end
 
