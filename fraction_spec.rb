@@ -5,7 +5,7 @@
 # Fraction Class Spec
 
 require 'rspec'
-require_relative  '../FRACTIONS/fraction'
+require_relative  "#{File.dirname(__FILE__)}/fraction"
 
 RSpec.describe Fraction, type: :class do
   # 1/2 3/4 5/6 7/8

@@ -4,7 +4,7 @@
 # Problem Statement: Adding fractions/rational numbers
 # Class :Fraction
 
-require_relative  '../FRACTIONS/number'
+require_relative  "#{File.dirname(__FILE__)}/number"
 
 class Fraction
   include Number
