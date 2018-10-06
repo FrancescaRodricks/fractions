@@ -5,7 +5,7 @@
 # Number Module Spec
 
 require 'rspec'
-require_relative  "#{File.dirname(__FILE__)}/number"
+require_relative  "#{__dir__}/number"
 
 RSpec.describe Number, type: :module do
 
